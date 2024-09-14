@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takvim</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .day-box {
+      background-color: #28a745; /* Kutucukları yeşil yapıyoruz */
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 1.2rem; /* Yazı boyutunu büyüttük */
+      position: relative;
+      width: 250px; /* Kutucuk genişliği */
+      height: 250px; /* Kutucuk yüksekliği */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .day-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover; /* Fotoğrafın kutucuk içinde orantılı olarak sığması sağlanır */
+    }
+    .day-box .day-content {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5); /* Arka plana biraz siyah opaklık ekliyoruz */
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .day-box:hover {
+      background-color: #218838; /* Hover etkisi */
+    }
+    /* Mobil cihazlar için düzenlemeler */
+    @media (max-width: 768px) {
+      .day-box {
+        width: 150px; /* Mobil cihazda kutucuk boyutunu küçültüyoruz */
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="row">
+    <h2 class="text-center mb-4">Sabır Takvimi</h2>
+    
+    <!-- 14-26 Eylül Günleri -->
+    <div class="col-12 d-flex flex-wrap justify-content-center">
+      <!-- Gün 14 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal14">
+        <img src="fotoğraflar/ 14eylül.png" alt="14 Eylül Fotoğrafı">
+        <div class="day-content">14 Eylül</div>
+      </div>
+
+      <!-- Gün 15 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal15">
+        <img src="fotoğraflar/15eylül.png" alt="15 Eylül Fotoğrafı">
+        <div class="day-content">15 Eylül</div>
+      </div>
+
+      <!-- Gün 16 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal16">
+        <img src="fotoğraflar/16eylül.png" alt="16 Eylül Fotoğrafı">
+        <div class="day-content">16 Eylül</div>
+      </div>
+
+      <!-- Gün 17 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal17">
+        <img src="fotoğraflar/17eylül.png" alt="17 Eylül Fotoğrafı">
+        <div class="day-content">17 Eylül</div>
+      </div>
+
+      <!-- Gün 18 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal18">
+        <img src="fotoğraflar/18eylül.png" alt="18 Eylül Fotoğrafı">
+        <div class="day-content">18 Eylül</div>
+      </div>
+
+      <!-- Gün 19 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal19">
+        <img src="fotoğraflar/19eylül.png" alt="19 Eylül Fotoğrafı">
+        <div class="day-content">19 Eylül</div>
+      </div>
+
+      <!-- Gün 20 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal20">
+        <img src="fotoğraflar/20eylül.png" alt="20 Eylül Fotoğrafı">
+        <div class="day-content">20 Eylül</div>
+      </div>
+
+      <!-- Gün 21 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal21">
+        <img src="fotoğraflar/21eylül.png" alt="21 Eylül Fotoğrafı">
+        <div class="day-content">21 Eylül</div>
+      </div>
+
+      <!-- Gün 22 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal22">
+        <img src="fotoğraflar/22eylül.png" alt="22 Eylül Fotoğrafı">
+        <div class="day-content">22 Eylül</div>
+      </div>
+
+      <!-- Gün 23 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal23">
+        <img src="fotoğraflar/23eylül.png" alt="23 Eylül Fotoğrafı">
+        <div class="day-content">23 Eylül</div>
+      </div>
+
+      <!-- Gün 24 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal24">
+        <img src="fotoğraflar/24eylül.png" alt="24 Eylül Fotoğrafı">
+        <div class="day-content">24 Eylül</div>
+      </div>
+
+      <!-- Gün 25 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal25">
+        <img src="fotoğraflar/25eylül.png" alt="25 Eylül Fotoğrafı">
+        <div class="day-content">25 Eylül</div>
+      </div>
+
+      <!-- Gün 26 -->
+      <div class="day-box col-12 col-sm-5 col-md-3" data-bs-toggle="modal" data-bs-target="#modal26">
+        <img src="fotoğraflar/26eylül.png" alt="26 Eylül Fotoğrafı">
+        <div class="day-content">26 Eylül</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modallar (Günlere tıklanınca açılacak içerikler) -->
+<!-- Modal 14 -->
+<div class="modal fade" id="modal14" tabindex="-1" aria-labelledby="modal14Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal14Label">14 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>14 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Flapper Stili (1920'ler)</h2>
+    <p><strong>Moda Akımının Kökeni:</strong> 1920'ler, I. Dünya Savaşı’nın ardından sosyal değişimlerin yaşandığı bir dönemdi. Kadınlar daha fazla özgürlük kazanırken, bu özgürleşme modaya da yansıdı. Flapper olarak bilinen genç kadınlar, geleneksel cinsiyet rolleriyle sınırlı olmayan bir yaşam tarzını benimsediler. Bu dönem, kıyafetlerde radikal bir değişimi simgeledi.</p>
+    <p><strong>Stilin Özellikleri:</strong> Flapper stili, diz hizasında kısa etekler, bol elbiseler, uzun kolyeler ve rahat hareket edebilmeyi sağlayan gevşek kıyafetlerle karakterize edildi. Bob kesimi adı verilen kısa saç modeli, bu dönemin en ikonik görünümü haline geldi. Korselerden kurtulan kadınlar, sigara içen, caz müzik dinleyen ve toplumsal normları sorgulayan bir yaşam tarzını benimsediler. Flapper stili, kadınların sadece modada değil, hayatta da yerleşik kalıpları kırmaya başladıkları bir dönemi simgeler.</p>
+    
+    <h2>Coco Chanel’in Moda Dünyasındaki İlk Adımları</h2>
+    <p><strong>Doğum Tarihi:</strong> 14 Eylül 1883, ünlü moda tasarımcısı Gabrielle Bonheur “Coco” Chanel'in doğum günüdür.</p>
+    <p><strong>Kariyer Başlangıcı:</strong> Coco Chanel, 1883 yılında Fransa’nın Saumur şehrinde doğdu. Moda dünyasında devrim yaratan Chanel, genç yaşlarda yeteneği ve özgün stiliyle dikkat çekti. 1910 yılında Paris'te ilk dükkanını açan Chanel, “küçük siyah elbise” ve “Chanel No. 5” parfümü ile tanınmaya başladı. Chanel’in modern kadın modasına getirdiği rahatlık ve zarafet, onu moda dünyasında ikonik bir figür haline getirdi. Yıllar içinde Chanel markası, dünya çapında prestijli bir moda evi haline geldi.</p>
+    
+    <h2>Sims: Fikirlerin Doğuşu</h2>
+    <p><strong>Bir Simülasyon Dünyasının İlk Kıvılcımları:</strong> Sims serisinin temelleri, 1991 yılında Will Wright tarafından atıldı. Will Wright, video oyunları dünyasında tanınan bir isimdi, ancak kendisinin en büyük eseri Sims olacaktı. Fikir ilk olarak SimCity adlı şehir simülasyon oyununun başarısından sonra şekillenmeye başladı. Wright, insanların sadece şehirleri değil, bireylerin günlük yaşamlarını da simüle edebileceği bir oyun fikrini kafasında canlandırıyordu. İlk başta, bu fikir oyun endüstrisinin çoğunluğu tarafından alışılmadık ve riskli bulundu. Ancak Wright’ın vizyonu, oyunculara günlük hayatın her detayını deneyimleyebileceği bir oyun sunmayı vaat ediyordu.</p>
+    
+    <h2>Türk Sinemasının İlk Adımları</h2>
+    <p><strong>Sinemanın Türkiye’ye Girişi:</strong> Türkiye sinemasının temelleri, 1914 yılında atıldı. İlk Türk filmi "Ayastefanos’taki Elmas Yüzük" (1914), Süreyya Serdengeçti tarafından çekildi. Bu film, İstanbul’un Ayastefanos bölgesindeki bir mücevherin çalınması ve ardından yaşanan olayları konu alıyordu. Ancak film günümüze ulaşmadı. Türk sinemasının başlangıcı olarak kabul edilen bu dönemde, sinema teknolojisi ve anlatı biçimleri henüz gelişme aşamasındaydı.</p>
+    
+    <h2>Kıbrıs’ın İlk Yerleşimcileri</h2>
+    <p><strong>Kıbrıs’ın Antik Tarihi:</strong> Kıbrıs, tarih boyunca pek çok medeniyete ev sahipliği yapmıştır. Antik çağlarda, MÖ 8. yüzyılda Kıbrıs’a gelen Fenikeliler, adanın en eski yerleşimcilerindendir. Fenikeliler, Kıbrıs’ın ticaret yolları üzerindeki stratejik önemini fark ederek adayı kolonileştirmişlerdir. Bu dönemde adada kurulan Fenike kolonileri, Kıbrıs’ın kültürel ve ekonomik gelişimine katkıda bulunmuştur.</p>
+    
+    <h2>Çikolata Devi Hershey'nin Kuruluşu</h2>
+    <p><strong>Kuruluş Tarihi:</strong> 14 Eylül 1900, çikolata dünyasının devlerinden biri olan Hershey Chocolate Company'nin kurulduğu tarihtir. Milton S. Hershey tarafından kurulan şirket, Amerika'nın en büyük çikolata üreticisi haline geldi. Milton Hershey, çocukken çikolata yapmayı öğrendi ve ilk çikolata fabrikasını 1894 yılında kurdu. Ancak Hershey Chocolate Company'nin kuruluş tarihi olarak 1900'ı kabul etmekteyiz. Şirket, Hershey, Pennsylvania'da ilk fabrikasını açarak, burada çikolata üretimini geliştirdi ve zamanla "Hershey's" markası, dünya çapında tanınan bir isim haline geldi. Hershey, ayrıca çalışanları ve bölge halkı için bir şehir kurarak, sosyal sorumluluk projelerine öncülük etti.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 15 -->
+<div class="modal fade" id="modal15" tabindex="-1" aria-labelledby="modal15Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal15Label">15 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>15 Eylül: Tarihte Bugün</h2>
+    
+    <h2>New Look (1947)</h2>
+    <p><strong>Dior’un Yeni Kadını:</strong> II. Dünya Savaşı’nın yıkıcı etkilerinin ardından, dünya yeniden toparlanmaya çalışırken, moda da bir devrim geçirdi. 1947’de Christian Dior, dünyaya "New Look" koleksiyonunu tanıttı. Bu, o zamana kadar savaşın getirdiği sade ve işlevsel giysilerin tersine, lüksü ve kadınsılığı yeniden modaya kazandırdı.</p>
+    <p><strong>Stilin Özellikleri:</strong> Dior’un New Look’u, incecik bel hatları, geniş etekler ve kadınsı bir silueti vurgulayan tasarımlardan oluşuyordu. Bele tam oturan ceketler, kabarık diz altı eteklerle kombinleniyordu. Bu yeni stil, kadınları daha sofistike ve zarif göstermeyi amaçladı. Kumaşın bolluğu ve detaylar, savaş döneminin kısıtlamalarına karşı bir tepki olarak algılandı. Dior, bu tarzla kadınları yeniden lüks ve romantik bir dünyaya taşıdı.</p>
+    
+    <h2>Christian Dior’un İlk Koleksiyonu: 15 Eylül 1947</h2>
+    <p>15 Eylül 1947, ünlü moda tasarımcısı Christian Dior’un “New Look” olarak bilinen ilk koleksiyonunu tanıttığı tarihtir. Christian Dior, 1947 yılında Paris’teki ilk defilesinde, savaş sonrası dönemin modasına yeni bir soluk getirdi. “New Look” adı verilen koleksiyon, dar bir bel ve geniş etekleri ile kadınsı bir siluet sundu. Dior’un bu yenilikçi tasarımı, savaş sonrası dönemde kadın modasında devrim yaratarak, feminen ve zarif bir stilin önünü açtı. Dior’un etkisi, hem Fransa’da hem de uluslararası moda sahnesinde geniş yankı uyandırdı.</p>
+    
+    <h2>Sims: Evi Yeniden İnşa Etmek</h2>
+    <p><strong>Yangından İlham Alan Bir Oyun:</strong> 1991'de Will Wright’ın evi bir yangında yok oldu. Bu yıkıcı olay, Sims fikrini şekillendiren unsurlardan biri oldu. Wright, evini yeniden inşa ederken mimarlık ve tasarım süreçlerine olan ilgisini keşfetti. Böylece oyuncuların sadece karakterleri değil, aynı zamanda yaşam alanlarını da yaratıp yönetebilecekleri bir simülasyon fikri doğdu.</p>
+    
+    <h2>Türk Sinemasının İlk Yapımcıları</h2>
+    <p><strong>Sinemanın Pioneeri: Dadaş Ahmet ve Sait Faik:</strong> 1920’ler ve 1930’lar, Türkiye sinemasının şekillendiği yıllardı. İlk Türk film yapımcılarından biri olan Ahmet Fehim, kısa metrajlı filmler üretmeye başladı. Ayrıca, Sait Faik Abasıyanık gibi edebiyatçılar, Türk sinemasına katkıda bulunarak hikaye anlatımında yenilikçi yaklaşımlar sundu. Bu dönemde, Türk sinemasının ulusal bir kimlik kazanmaya başladığı görüldü.</p>
+    
+    <h2>Kıbrıs’ta Helenistik Dönem</h2>
+    <p><strong>Makedonya İmparatorluğu ve Helenistik Etkiler:</strong> MÖ 4. yüzyılda, Büyük İskender'in Makedonya İmparatorluğu Kıbrıs’ı fethetti. Bu dönem, adanın kültürel yapısında önemli değişikliklere yol açtı. Helenistik etkiler, Kıbrıs’ın sanatı, mimarisi ve günlük yaşamında kendini göstermeye başladı. İskender’in ölümünden sonra adada kurulan Ptolemaios Krallığı, Helenistik kültürün etkisini sürdürdü.</p>
+    
+    <h2>15 Eylül 1952: KFC'nin İlk Franchise Anlaşması</h2>
+    <p>15 Eylül 1952, ünlü kızarmış tavuk markası Kentucky Fried Chicken (KFC)'nin ilk franchise anlaşmasını imzaladığı tarihtir. Harland Sanders, 1930'larda tavuk pişirme konusunda geliştirdiği özel tariflerle tanındı. Ancak KFC'nin büyük bir marka haline gelmesi 1952 yılında Pete Harman ile yapılan franchise anlaşması ile gerçekleşti. Sanders'ın “Secret Recipe” olarak bilinen baharat karışımı, KFC’yi benzersiz kıldı. Sanders, tavukları kendi özel tarifine göre hazırlayarak, müşteri memnuniyetini ön planda tutarak dünya çapında tanınan bir marka oluşturdu. KFC'nin başarısı, fast food sektörünün öncüsü olmasını sağladı ve global çapta geniş bir şube ağına sahip oldu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 16 -->
+<div class="modal fade" id="modal16" tabindex="-1" aria-labelledby="modal16Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal16Label">16 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>16 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Hippie Modası (1960'lar ve 1970'ler)</h2>
+    <p><strong>Barış, Sevgi ve Özgürlük:</strong> 1960'lar ve 70'ler, sosyal ve politik açıdan hareketli yıllardı. Vietnam Savaşı’na karşı direnişin, çevre bilincinin ve özgürlük arayışının damgasını vurduğu bu dönemde, moda da radikal bir değişime uğradı. Hippie modası, gençlerin toplumsal düzeni sorgulayıp özgür bir yaşam biçimini benimsediği bu dönemin sembolü oldu.</p>
+    <p><strong>Stilin Özellikleri:</strong> Hippie stili, doğaya dönüşü ve sadeliği vurgulayan bir modaydı. Rahat, salaş kıyafetler, çiçek desenleri, geniş paçalı pantolonlar, saç bantları ve el yapımı aksesuarlar bu stilin ana unsurlarıydı. Doğal kumaşlar tercih edilirken, kıyafetlerde etnik desenler ve batik boyamalar sıkça kullanılıyordu. Özellikle barış sembolleri ve çiçek motifleri bu dönemin simgeleri haline geldi. Moda, aynı zamanda tüketim toplumuna karşı bir duruş sergileyerek, kendi kıyafetlerini yaratma fikrini teşvik ediyordu.</p>
+    
+    <h2>Yves Saint Laurent’in Moda Kariyerine Başlangıç: 16 Eylül 1961</h2>
+    <p>16 Eylül 1961, ünlü moda tasarımcısı Yves Saint Laurent’in ilk prêt-à-porter koleksiyonunu tanıttığı tarihtir. Yves Saint Laurent, 1961 yılında Paris'te kendi moda evini kurdu ve hazır giyim (prêt-à-porter) koleksiyonunu sundu. Saint Laurent, kadınların gardıroplarına rahatlık getiren ve modayı demokratikleştiren tasarımlar sundu. “Smoking” ceket ve “Safari” elbiseleri ile tanınan Saint Laurent, kadın modasına erkek giysilerinden esinlenen tasarımlar getirdi. Bu yenilikçi yaklaşımı, onu moda dünyasında bir ikon haline getirdi.</p>
+    
+    <h2>Sims: Yapım Aşamasına Geçiş</h2>
+    <p><strong>Maxis ve Electronic Arts’ın Rolü:</strong> Sims’in yapım aşaması 1997 yılında ciddi şekilde başladı. Maxis şirketi, Will Wright’ın oyun fikirlerini geliştirmek için ideal bir ortam sağlıyordu. Ancak, Sims’in potansiyelini görmekte zorluk çeken birçok yayıncı ve yatırımcı vardı. 1997 yılında Maxis, Electronic Arts tarafından satın alındı ve bu, Sims projesine büyük bir destek sağladı. Yapım süreci, hem teknik hem de yaratıcı zorluklarla doluydu. Oyunun geliştirilmesi sırasında, karakterlerin ve evlerin detaylı simülasyonu gibi yenilikçi fikirler üzerine yoğunlaşıldı. İlk başta, Sims’in bu kadar derin ve etkileşimli bir deneyim sunabileceği konusunda şüpheler vardı.</p>
+    
+    <h2>Sinemanın Altın Çağı</h2>
+    <p><strong>Yeşilçam’ın Doğuşu:</strong> 1950'ler ve 1960'lar, Türk sinemasının Yeşilçam dönemi olarak bilinen altın çağına damgasını vurdu. Yeşilçam, İstanbul’un Yeşilçam Caddesi’nde faaliyet gösteren film stüdyolarından ismini alır. Bu dönemde, Türkan Şoray, Kemal Sunal ve Şener Şen gibi efsanevi isimler Türk sinemasının önemli figürleri haline geldi. Filmler genellikle aşk, komedi ve dram türlerinde üretildi ve halkın geniş kesimlerine hitap etti.</p>
+    
+    <h2>Kıbrıs: Roma ve Bizans Dönemi</h2>
+    <p><strong>Roma İmparatorluğu ve Kıbrıs:</strong> MÖ 58’de, Kıbrıs, Roma İmparatorluğu’nun bir parçası oldu. Roma döneminde, adada büyük inşaat projeleri gerçekleştirildi; Salamis ve Paphos gibi önemli şehirler, Roma mimarisinin izlerini taşıdı. Bizans Dönemi ile birlikte, Hristiyanlık adada yayılmaya başladı ve birçok kilise ile manastır inşa edildi.</p>
+    
+    <h2>Lay's Patates Cipsinin Tarihçesi: 16 Eylül 1932</h2>
+    <p>16 Eylül 1932, Lay’s markasının ilk patates cipslerinin üretildiği tarihtir. Herman Lay, 1930'larda Amerika'nın güneyinde patates cipsi üretimi yapmaya başladı. Ancak, Lay’s markası resmi olarak 1932 yılında kuruldu. Herman Lay, cips üretiminde kaliteyi ve lezzeti ön planda tutarak, patates cipslerinin tek tip ve eşit şekilde kızartılmasını sağladı. Bu yenilikçi yaklaşım, Lay’s'in patates cipsleri dünya çapında popüler hale gelmesini sağladı. Şirket, zaman içinde birçok farklı tat ve çeşitle tüketici beğenisine sundu ve patates cipsi pazarında önemli bir oyuncu haline geldi.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 17 -->
+<div class="modal fade" id="modal17" tabindex="-1" aria-labelledby="modal17Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal17Label">17 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>17 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Punk Modası (1970'ler Sonu)</h2>
+    <p><strong>Kural Tanımayan Bir Akım:</strong> 1970'lerin sonlarına doğru doğan Punk hareketi, toplumun yerleşik kurallarına başkaldıran gençlerin bir isyan sembolü haline geldi. Bu dönemin modası, geleneksel normları alt üst eden radikal bir görünüm sundu.</p>
+    <p><strong>Stilin Özellikleri:</strong> Punk modası, yırtık pantolonlar, deri ceketler, zımbalar, motosiklet botları, asi sloganlar ve siyahın yoğun kullanımı ile tanınırdı. Ayrıca, saçlar sıkça parlak renklerde boyanır ve sivri dikenli saç modelleri yapılırdı. Piercingler, zincirler ve asi tavırlar punk stilini tamamlayan unsurlardı. Moda, burada bir ifade biçimi haline gelmişti; bireysellik ve isyan ön plandaydı. Vivienne Westwood gibi tasarımcılar, punk modasının gelişiminde büyük rol oynadı.</p>
+    
+    <h2>Gianni Versace’nin İlk Moda Evi: 17 Eylül 1978</h2>
+    <p>17 Eylül 1978, ünlü İtalyan moda tasarımcısı Gianni Versace’in ilk koleksiyonunu tanıttığı tarihtir. Gianni Versace, 1978 yılında Milano’da kendi moda evini kurarak, şatafatlı ve renkli tasarımlarıyla tanınmaya başladı. Versace’nin koleksiyonları, cüretkar desenler ve lüks detaylarla dikkat çekti. Özellikle barok tarzı ve cesur grafikler ile tanınan Versace, modayı sanatla birleştirerek kendine has bir stil oluşturdu. Versace markası, dünya çapında prestij kazandı ve moda dünyasında kalıcı bir iz bıraktı.</p>
+    
+    <h2>Sims: Simoleon’un Yaratılması</h2>
+    <p><strong>Oyun İçindeki Para Birimi:</strong> Sims dünyasında kullanılan para birimi "Simoleon" olarak adlandırıldı. Bu para birimi, oyun dünyasında ekonomik sistemin temel taşlarından birini oluşturdu. Simoleon’lar, oyuncuların karakterlerinin ihtiyaçlarını karşılamak için kullanabilecekleri para birimiydi. Bu, sadece estetik bir detay değil, aynı zamanda oyunun ekonomik dinamiklerinin önemli bir parçasıydı. Simoleon’ların tasarımı, oyunun günlük yaşam simülasyonuna katkıda bulunarak, oyuncuların evlerini ve yaşamlarını yönetirken gerçek bir ekonomik sistemle etkileşime girmelerini sağladı.</p>
+    
+    <h2>Sinemanın İlk Türk Renkli Filmi</h2>
+    <p><strong>"Karanlık Dünya" (1960):</strong> Türk sinemasında renkli filmler dönemi, 1960’larda başladı. "Karanlık Dünya" adlı film, Türk sinemasının ilk renkli uzun metrajlı filmi olarak kabul edilir. Bu dönemde renkli film teknolojisinin yaygınlaşması, Türk sinemasına estetik ve teknik yenilikler getirdi. Filmin yönetmenliğini Süreyya Duru üstlendi ve film, dönemin sosyal ve kültürel temalarını işledi.</p>
+    
+    <h2>Kıbrıs: Orta Çağ ve Kıbrıs Krallığı</h2>
+    <p><strong>Kıbrıs Krallığı ve Haçlı Seferleri:</strong> 12. yüzyılda, Kıbrıs, Haçlı Seferleri sırasında Richard the Lionheart tarafından fethedildi ve daha sonra Lusignan Krallığı tarafından yönetildi. Bu dönemde Kıbrıs, Orta Çağ’ın etkisi altında kalmış ve Avrupa’dan gelen etkilerle kültürel olarak zenginleşmiştir. Kıbrıs Krallığı, adanın siyasi ve kültürel tarihinde önemli bir rol oynamıştır.</p>
+    
+    <h2>Tuzlu Krakerlerin Doğuşu: 17 Eylül 1889</h2>
+    <p>17 Eylül 1889, Nabisco'nun (National Biscuit Company) tuzlu krakerleri ilk kez piyasaya sürdüğü tarihtir. Nabisco, 1898 yılında bu ismi aldı, ancak şirketin tuzlu krakerleri 1889 yılında tanıtıldı. Nabisco'nun tuzlu krakerleri, özellikle Uneeda Biscuit adıyla piyasaya sürüldü. Bu krakerler, hem kaliteli hem de dayanıklı ambalajları sayesinde kısa sürede popülerlik kazandı. Nabisco’nun tuzlu krakerleri, abur cubur pazarında önemli bir yer edinerek, tüketicilerin beğenisini topladı ve bu ürün, şirketin başarısında önemli bir rol oynadı.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 18 -->
+<div class="modal fade" id="modal18" tabindex="-1" aria-labelledby="modal18Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal18Label">18 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>18 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Disco Modası (1970'ler)</h2>
+    <p><strong>Parıltılı, Parlak ve Göz Alıcı:</strong> 1970'ler disco kültürü, dans pistlerine hükmeden ve renkli bir dünyayı temsil eden bir moda akımıydı. Gece kulüpleri, parıltılı giysiler ve platform topuklarla doldu. Disko modası, enerjik ve canlı bir yaşam tarzını yansıtıyordu.</p>
+    <p><strong>Stilin Özellikleri:</strong> Disco modasında, parlak kumaşlar, payetli elbiseler, geniş yakalı gömlekler ve platform ayakkabılar ön plandaydı. Pantolon paçaları geniş, kumaşlar ise parlak ve dikkat çekiciydi. Kadınlar ışıltılı elbiseler giyerken, erkekler geniş yakalı, dar gömlekler ve parlak ceketlerle gece hayatında yerini alıyordu. Moda, dans pistiyle buluşan eğlenceli, özgüvenli ve göz alıcı bir yaşam tarzını ifade ediyordu.</p>
+    
+    <h2>Karl Lagerfeld’in Chanel’e Katkıları: 18 Eylül 1983</h2>
+    <p>18 Eylül 1983, ünlü moda tasarımcısı Karl Lagerfeld’in Chanel moda evine katıldığı tarihtir. Lagerfeld, Chanel'in yaratıcı direktörü olarak göreve başladığı 1983'ten itibaren markayı modernize etti. Yenilikçi tasarımları ve yaratıcı vizyonuyla, Chanel’in klasik tasarımlarına modern dokunuşlar ekledi ve markayı genç, dinamik bir hale getirdi. Chanel, Lagerfeld liderliğinde moda dünyasında ikonik bir konum kazandı.</p>
+    
+    <h2>Sims: Oyun Dünyasının Tasarımı</h2>
+    <p><strong>Evler ve Karakterler:</strong> Sims oyununun geliştirilmesinde en önemli adımlardan biri, karakterlerin ve evlerin tasarımıydı. Wright, karakterlerin ve evlerin birbirleriyle etkileşimde bulunabilmesi için karmaşık bir sistem geliştirdi. Karakterlerin kişisel özellikleri, istekleri ve gereksinimleri vardı. Evler, bu karakterlerin ihtiyaçlarını karşılayacak şekilde tasarlandı. Karakterlerin yaşam döngüsünü, sosyal etkileşimlerini ve kişisel alanlarını yönetebileceği bir sistem geliştirildi.</p>
+    
+    <h2>Sinema: Sosyal ve Politik Filmler</h2>
+    <p><strong>Sinemada Sosyal Realizm:</strong> 1970'ler, Türk sinemasında sosyal gerçekçilik akımının ön plana çıktığı bir dönemdi. Yılmaz Güney, bu dönemin en önemli yönetmenlerinden biri olarak bilinir. "Yol" (1982) gibi filmleri, toplumun farklı kesimlerinin yaşadığı zorlukları ve adaletsizlikleri konu aldı. Sosyal ve politik içerikli filmler, Türkiye sinemasının toplumsal olaylara ve sosyal adaletsizliklere ışık tutma çabasını yansıttı.</p>
+    
+    <h2>Kıbrıs: Osmanlı Dönemi Başlangıcı</h2>
+    <p><strong>Osmanlı İmparatorluğu’nun Kıbrıs’ı Fethi:</strong> 1571’de Osmanlı İmparatorluğu Kıbrıs’ı fethetti ve adada 300 yılı aşkın bir süre hüküm sürdü. Osmanlı döneminde Kıbrıs’ta önemli değişiklikler yaşandı; yeni yönetim yapıları kuruldu ve adaya Osmanlı kültürü hakim oldu. Lefkoşa ve Girne gibi şehirlerde Osmanlı dönemine ait camiler, hamamlar ve köprüler inşa edildi.</p>
+    
+    <h2>Pepsi’nin İlk Yılları: 18 Eylül 1898</h2>
+    <p>18 Eylül 1898, Pepsi-Cola'nın ilk kez tanıtıldığı tarihtir. Caleb Bradham, 1893 yılında kendi formülünü geliştirdiği Pepsi-Cola'yı 1898'de piyasaya sürdü. Pepsi-Cola'nın adı, "pepsin" adlı sindirim enzimi ve "cola" içecek bileşenlerinden türetilmiştir. Pepsi, şekerli gazlı içecekler arasında büyük bir rekabet oluşturdu ve zamanla kendi marka kimliğini oluşturdu. Pepsi’nin başarısı, markanın dünya çapında tanınan bir içecek haline gelmesini sağladı.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 19 -->
+<div class="modal fade" id="modal19" tabindex="-1" aria-labelledby="modal19Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal19Label">19 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>19 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Minimalist Moda (1990'lar)</h2>
+    <p><strong>Az Ama Öz:</strong> 1990'lar, moda dünyasında sadeliğin ve işlevselliğin ön plana çıktığı bir dönem olarak bilinir. Minimalist moda, fazlalıklardan kaçınarak zarif, sade ve sofistike bir tarzı temsil ediyordu.</p>
+    <p><strong>Stilin Özellikleri:</strong> Minimalist moda, sade renkler, düz hatlar ve işlevsel tasarımlar ile karakterize edildi. Siyah, beyaz, gri gibi nötr tonlar öne çıkarken, abartısız kesimler tercih ediliyordu. Kıyafetlerde fazlalık yaratacak detaylar ortadan kaldırılmıştı. Calvin Klein ve Jil Sander gibi markalar, bu akımın öncüsü oldu. Bu dönemde, "az çoktur" felsefesi, modanın her alanında kendini gösterdi.</p>
+    
+    <h2>Donatella Versace’nin Versace’yi Devralması: 19 Eylül 1997</h2>
+    <p>19 Eylül 1997, ünlü İtalyan moda markası Versace'nin kurucusu Gianni Versace’nin ölümünden sonra markayı kardeşi Donatella Versace’nin devraldığı tarihtir. Donatella Versace, 1997 yılında kardeşinin ölümünden sonra Versace’nin kreatif direktörü oldu. Donatella, Versace’nin şatafatlı ve çarpıcı stilini korurken, markayı modernize etti ve uluslararası alanda etkisini artırdı. Versace’nin tasarımları, Donatella’nın vizyonuyla birlikte, markayı çağdaş moda dünyasında önemli bir oyuncu haline getirdi.</p>
+    
+    <h2>Sims: İlk Oynanış Testleri</h2>
+    <p><strong>Geri Bildirim ve Düzeltmeler:</strong> Sims’in geliştirilmesinde, ilk oynanış testleri ve geri bildirimler önemli bir rol oynadı. Oyun, geliştirici ekibin iç testlerinin yanı sıra dış test kullanıcılardan da geri bildirim aldı. Bu testler, oyunun temel mekaniklerinin işleyişini değerlendirmek ve oyunun dengesi ile kullanıcı deneyimini iyileştirmek için yapıldı. Geri bildirimler doğrultusunda, karakterlerin etkileşimleri, ev tasarımı ve oyunun genel oynanışı üzerinde çeşitli değişiklikler yapıldı. Bu süreç, oyunun son haline gelmesinde kritik bir rol oynadı.</p>
+    
+    <h2>Sinema: Türk Korku Sinemasının Yükselişi</h2>
+    <p><strong>"Dünyayı Kurtaran Adam" (1982):</strong> 1980'ler, Türk sinemasında korku ve bilim kurgu türlerinde yeniliklerin yaşandığı bir dönemdi. "Dünyayı Kurtaran Adam", Türk sinemasının ilk bilim kurgu filmi olarak dikkat çekti. Film, Cem Küçük tarafından yönetildi ve Türk sinemasında farklı bir türdeki ilk deneme olarak kabul edildi. Film, aynı zamanda Türk sinemasının türler arası denemeler yaptığı bir dönemi simgeliyor.</p>
+    
+    <h2>Kıbrıs: Kıbrıs’ın İngiliz Kolonisi Olması</h2>
+    <p><strong>Kıbrıs’ın İngiliz Yönetimine Geçişi:</strong> 1878’de, Kıbrıs, Osmanlı İmparatorluğu tarafından İngiltere’ye kiralandı ve 1925’te tam anlamıyla İngiliz kolonisiydi. İngiliz döneminde, adada modern altyapı projeleri gerçekleştirildi; demiryolları, limanlar ve eğitim kurumları kuruldu. Bu dönemde Kıbrıs’ın ekonomik ve sosyal yapısında önemli değişiklikler görüldü.</p>
+    
+    <h2>Nestlé'nin Şekerleme Üretimine Başlangıcı: 19 Eylül 1867</h2>
+    <p>19 Eylül 1867, Nestlé markasının ilk şekerleme ürünlerinin üretildiği tarihtir. Henri Nestlé, 1867'de, bebekler için besleyici bir mama formülü geliştirdi. Nestlé'nin ilk ürünleri, süt ve tahıl karışımından oluşuyordu. Şirket, zamanla sütlü şekerlemeler ve çikolatalar üretmeye başladı ve bu ürünler global bir pazar buldu. Nestlé, kaliteli içerikleri ve yenilikçi ürünleriyle, tatlı sektöründe kendine sağlam bir yer edinmiş ve dünya çapında tanınan bir marka haline gelmiştir.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 20 -->
+<div class="modal fade" id="modal20" tabindex="-1" aria-labelledby="modal20Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal20Label">20 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>20 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Grunge Modası (1990'lar)</h2>
+    <p><strong>Asi ve Dağınık Bir Tarz:</strong> 1990'ların başlarında, Seattle merkezli müzik grupları tarafından popüler hale getirilen Grunge stili, modada yeni bir akım başlattı. Bu tarz, salaş ve asi bir görünüme odaklanarak, gençlik kültüründe büyük bir etki yarattı.</p>
+    <p><strong>Stilin Özellikleri:</strong> Grunge modası, yıpranmış kot pantolonlar, oduncu gömlekleri, bol kazaklar ve eski püskü botlar ile tanımlandı. Kıyafetlerin dağınık ve salaş olması bu tarzın en belirgin özelliğiydi. Grunge akımı, şıklık ve düzenli görünümün aksine, daha asi, rahat ve günlük bir stili benimsiyordu. Kurt Cobain ve Nirvana gibi müzik ikonları bu tarzın öncüleri arasında yer aldı.</p>
+    
+    <h2>Prada’nın Uluslararası Başarısı: 20 Eylül 1994</h2>
+    <p>20 Eylül 1994, ünlü İtalyan moda markası Prada’nın “Prada” adını kullanarak uluslararası bir moda markası haline gelmeye başladığı tarihtir. Miuccia Prada, 1994 yılında Prada’yı modernize ederek, markayı lüks moda dünyasında tanınan bir isim yaptı. Prada’nın minimalist tasarımları, yüksek kaliteli malzemeleri ve yenilikçi yaklaşımı, markayı moda endüstrisinde bir öncü haline getirdi. Prada’nın tasarımları, sofistike ve çağdaş stil anlayışı ile moda dünyasında geniş bir kitleye hitap etti.</p>
+    
+    <h2>Sims: İlk Oyun Versiyonu ve Yayın</h2>
+    <p><strong>Oyun Dünyasına İlk Adım:</strong> Sims’in ilk versiyonu, 4 Şubat 2000 tarihinde piyasaya sürüldü. Oyun, büyük bir heyecanla karşılandı ve kısa sürede popülerlik kazandı. İlk çıkışında, oyunculara günlük yaşamın detaylarını yönetme fırsatı sunan bir oyun deneyimi sundu. Sims, oyun dünyasında devrim yaratarak, oyuncuların karakterlerini ve yaşam alanlarını tamamen kişiselleştirebileceği bir simülasyon deneyimi sundu. Bu ilk sürüm, Sims serisinin başarısının temelini attı ve dünya çapında büyük bir takipçi kitlesi oluşturdu.</p>
+    
+    <h2>Sinema: Dönüm Noktası - "Eşkıya"</h2>
+    <p><strong>Türk Sinemasının Yeniden Doğuşu:</strong> 1996 yılında Yavuz Turgul tarafından yönetilen "Eşkıya", Türk sinemasında bir dönüm noktası olarak kabul edilir. Bu film, 1980'ler ve 1990'larda Türk sinemasının yeniden canlanmasına katkıda bulundu. Kenan Işık ve Şener Şen gibi oyuncuların performanslarıyla dikkat çeken film, hem eleştirmenlerden hem de seyircilerden büyük övgü aldı.</p>
+    
+    <h2>Kıbrıs: Kıbrıs Cumhuriyeti’nin Kuruluşu</h2>
+    <p><strong>Bağımsızlık ve Kıbrıs Cumhuriyeti:</strong> 1960’ta, Kıbrıs Cumhuriyeti kuruldu ve adanın bağımsızlığı ilan edildi. Makarios III ilk Cumhurbaşkanı olarak göreve başladı ve Kıbrıs, bağımsız bir devlet olarak uluslararası alanda tanındı. Ancak bu dönemde adada toplumsal gerilimler ve etnik çatışmalar yaşandı, bu da ülkenin gelecekteki sorunlarına zemin hazırladı.</p>
+    
+    <h2>Twinkie’nin Tarihçesi: 20 Eylül 1930</h2>
+    <p>20 Eylül 1930, ünlü tatlı abur cubur Twinkie'nin ilk kez piyasaya sürüldüğü tarihtir. Hostess Brands tarafından üretilen Twinkie, 1930 yılında piyasaya sunuldu. Twinkie, vanilya dolgulu kek olarak tanıtıldı ve kısa sürede popülerlik kazandı. Twinkie’nin özel dolgusu ve hafif kıvamı, onu diğer tatlılardan ayırdı ve tatlı severlerin ilgisini çekti. Twinkie, Amerika'nın en tanınmış tatlılarından biri haline geldi ve uzun yıllar boyunca popülerliğini korudu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 21 -->
+<div class="modal fade" id="modal21" tabindex="-1" aria-labelledby="modal21Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal21Label">21 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>21 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Boho-Chic Modası (2000'ler)</h2>
+    <p><strong>Bohem ve Şık:</strong> 2000'lerin başında popüler hale gelen Boho-Chic tarzı, bohem rahatlığı ile şıklığı bir araya getirdi. Doğal kumaşlar ve vintage parçalar bu akımın en belirgin özelliklerindendi.</p>
+    <p><strong>Stilin Özellikleri:</strong> Boho-Chic stili, bol elbiseler, desenli şallar, etnik takılar ve salaş hırkalarla öne çıktı. Özellikle doğal tonlar ve toprak renkleri kullanılarak sade ama dikkat çekici kombinler yapıldı. Akım, doğallık ve özgürlüğü yansıtan rahat, aynı zamanda şık bir görünüm sundu. Kate Moss ve Sienna Miller, bu tarzı popüler hale getiren ünlüler arasında yer aldı.</p>
+    
+    <h2>Marc Jacobs’ın İlk Koleksiyonu: 21 Eylül 1986</h2>
+    <p>21 Eylül 1986, ünlü Amerikalı moda tasarımcısı Marc Jacobs’ın ilk koleksiyonunu tanıttığı tarihtir. Marc Jacobs, 1986 yılında New York’taki ilk moda koleksiyonunu sundu ve kısa sürede moda dünyasında kendine yer buldu. Jacobs’un tasarımları, genellikle genç ve dinamik bir stil anlayışıyla tanındı. Jacobs, yaratıcı ve sıradışı tasarımlarıyla moda dünyasında kendine sağlam bir yer edindi ve global çapta tanınan bir marka haline geldi.</p>
+    
+    <h2>Sims: İlk Genişleme Paketleri</h2>
+    <p><strong>Genişleme Paketleri ve Yenilikler:</strong> Sims’in piyasaya sürülmesinin ardından, oyunun popülaritesi arttı ve genişleme paketleri geliştirilmeye başlandı. İlk genişleme paketleri, oyunculara yeni özellikler ve içerikler ekleyerek oyunun zenginliğini artırdı. Bu paketler, oyuncuların karakterlerinin hayatlarına daha fazla derinlik ve çeşitlilik eklemelerine olanak tanıdı. Örneğin, yeni meslekler, sosyal etkileşimler ve dekorasyon seçenekleri, Sims dünyasını daha dinamik ve ilgi çekici hale getirdi.</p>
+    
+    <h2>Sinema: Çağdaş Türk Sineması ve Ödüller</h2>
+    <p><strong>Uluslararası Başarılar:</strong> 2000'ler, Türk sinemasının uluslararası alanda büyük başarılar elde ettiği bir dönemdi. Nuri Bilge Ceylan, Fatih Akın ve Zeki Demirkubuz gibi yönetmenler, dünya çapında tanınan ve ödüller kazanan filmler üretti. "Uzak" (2002), "Kader" (2006) ve "Gönül Yarası" (2005) gibi filmler, Türk sinemasının uluslararası arenada ses getirmesini sağladı.</p>
+    
+    <h2>Kıbrıs: Kıbrıs’ta 1974 Kıbrıs Barış Harekatı</h2>
+    <p><strong>Kıbrıs’ın Bölünmesi:</strong> 1974’te, Kıbrıs’ta bir askeri darbe gerçekleşti ve Türkiye, adanın kuzeyine müdahale ederek Kıbrıs Barış Harekatı’nı başlattı. Bu olay, adanın kuzey ve güney olarak ikiye bölünmesine yol açtı. Bu dönemde, Kıbrıs’taki etnik ve politik gerilimler derinleşti ve adanın gelecekteki barış süreci zorlaştı.</p>
+    
+    <h2>Toblerone’un İlk Üretimi: 21 Eylül 1908</h2>
+    <p>21 Eylül 1908, ünlü çikolata markası Toblerone'un ilk üretildiği tarihtir. Theodor Tobler ve Emil Baumann, 1908 yılında İsviçre'nin Bern şehrinde Toblerone’u üretmeye başladılar. Toblerone, kendine özgü üçgen şeklindeki çikolata barı ile dikkat çekti. Çikolatanın adı, “Tobler” ve “Torrone” (İtalyanca "düz çikolata") kelimelerinin birleşiminden türetilmiştir. Toblerone, kısa sürede popülerlik kazandı ve bugün hala çikolata severler arasında beğenilen bir ürün olarak bilinmektedir.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 22 -->
+<div class="modal fade" id="modal22" tabindex="-1" aria-labelledby="modal22Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal22Label">22 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>22 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Mod Modası (1960'lar)</h2>
+    <p><strong>Modern ve Renkli Bir Devrim:</strong> 1960’ların başlarında İngiltere’de doğan Mod Modası, gençliğin enerjisini ve dinamizmini yansıttı. Bu akım, modernizmden etkilenerek hem erkek hem de kadın modasında köklü değişiklikler yarattı.</p>
+    <p><strong>Stilin Özellikleri:</strong> Mod tarzı, düz, geometrik kesimlerle karakterize edilen minimalist kıyafetler ve çarpıcı renk paletleriyle öne çıktı. Mini etekler, A kesimli elbiseler ve parlak renkler bu akımın vazgeçilmez parçalarıydı. Gençler, asi ve modern bir görünümü benimseyerek, dönemin baskın stillerine karşı çıktılar. Twiggy gibi ikonlar, mod akımının dünya çapında yayılmasını sağladı.</p>
+    
+    <h2>Ralph Lauren’in İlk Koleksiyonu: 22 Eylül 1971</h2>
+    <p>22 Eylül 1971, ünlü Amerikalı moda tasarımcısı Ralph Lauren’in ilk koleksiyonunu tanıttığı tarihtir. Ralph Lauren, 1971 yılında ilk Polo Ralph Lauren koleksiyonunu piyasaya sürdü. Lauren’in tasarımları, klasik Amerikan tarzını modern bir dokunuşla sundu ve özellikle erkek giyiminin şık ve rahat bir temsilcisi oldu. Polo Ralph Lauren, kısa sürede dünya çapında tanınan bir marka haline geldi ve Ralph Lauren, moda dünyasında önemli bir figür olarak kabul edildi.</p>
+    
+    <h2>Sims: Sims 2'nin Gelişimi</h2>
+    <p><strong>Yeni Bir Nesil Simülasyon:</strong> 2004 yılında Sims 2, ilk oyunun devamı olarak piyasaya sürüldü. Sims 2, daha gelişmiş grafikler ve oyun mekanikleri sunarak, oyunculara daha derin ve kapsamlı bir deneyim sundu. Bu yeni nesil oyun, karakterlerin yaşam döngüsünü ve aile dinamiklerini daha ayrıntılı bir şekilde simüle etti. Sims 2, karakterlerin yaşlanmasını, çocuk sahibi olmasını ve aile ilişkilerini yönetmeyi mümkün kıldı. Ayrıca, daha geniş bir özellik ve içerik yelpazesi sundu. Bu genişleme, Sims serisinin başarısını daha da pekiştirdi.</p>
+    
+    <h2>Sinema: Türk Sinemasının Kadın Yönetmenleri</h2>
+    <p><strong>Kadınların Sinemadaki Rolü:</strong> Türk sinemasında kadın yönetmenlerin etkisi, 2010'lar itibariyle daha da belirginleşti. Reyhan Yedinci, Pelinn Çiftçi ve Hande K. Okan gibi yönetmenler, kadın bakış açısını ve deneyimlerini sinemaya yansıtarak önemli katkılarda bulundular. Bu dönemde, kadınların sinemadaki rolü ve etkisi artarak, Türk sinemasının çeşitliliğini ve derinliğini artırdı.</p>
+    
+    <h2>Kıbrıs: Kıbrıs’ta Barış Süreci ve Müzakereler</h2>
+    <p><strong>Kıbrıs Sorununun Çözüm Çabaları:</strong> 1980’lerden itibaren, uluslararası toplum, Kıbrıs’taki bölünmüşlüğü çözmek için çeşitli müzakereler başlattı. BM öncülüğünde yürütülen müzakereler, adanın yeniden birleşmesi için çeşitli öneriler sunmuş ve bu süreçte birçok uluslararası anlaşma imzalanmıştır. Ancak bu anlaşmalar, adadaki siyasi çözüm için hala tamamlanmamıştır.</p>
+    
+    <h2>Pringles’ın Lansmanı: 22 Eylül 1968</h2>
+    <p>22 Eylül 1968, Pringles markasının patates cipslerinin piyasaya sürüldüğü tarihtir. Procter & Gamble tarafından geliştirilen Pringles, klasik patates cipslerinden farklı olarak eşit ve düzenli bir şekle sahipti. Fred Baur tarafından tasarlanan Pringles, yağda kızarmış patates cipsleri yerine, özel bir formül ile üretilen ve uniform şekilde olan cipsler olarak tanıtıldı. Pringles, ambalaj tasarımı ve yenilikçi formülü ile kısa sürede büyük bir popülerlik kazandı ve global çapta tanınan bir markaya dönüştü.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 23 -->
+<div class="modal fade" id="modal23" tabindex="-1" aria-labelledby="modal23Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal23Label">23 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>23 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Glam Rock (1970'ler)</h2>
+    <p><strong>Parlak ve Gösterişli:</strong> 1970’lerin başında ortaya çıkan Glam Rock, müzik ve moda dünyasını kasıp kavurdu. Gösteriş, abartı ve cinsiyet rollerini altüst eden bir stil sunarak sahnelerde büyüleyici bir etki yarattı.</p>
+    <p><strong>Stilin Özellikleri:</strong> Glam Rock stili, parlak kumaşlar, payetler, pırıltılı makyajlar ve dikkat çekici aksesuarlarla doluydu. David Bowie’nin Ziggy Stardust karakteri bu akımın en büyük temsilcilerinden biri oldu. Topuklu botlar, deri kıyafetler ve androjen görünümler, bu tarzın öncülüğünde cesurca sergilendi. Glam Rock, modada cinsiyet sınırlarını bulanıklaştıran bir devrim yarattı.</p>
+    
+    <h2>Giorgio Armani’nin İlk Moda Şovları: 23 Eylül 1980</h2>
+    <p>23 Eylül 1980, ünlü İtalyan moda tasarımcısı Giorgio Armani'nin ilk büyük moda şovunu gerçekleştirdiği tarihtir. Giorgio Armani, 1980 yılında Milano'daki defilesiyle, şıklığı ve zarafeti ön planda tutan tasarımlarını sundu. Armani’nin minimal ve sofistike tasarımları, özellikle erkek giyimi için devrim niteliğindeydi. Armani’nin moda dünyasındaki etkisi, onu global bir ikon haline getirdi ve markası, lüks giyimde önemli bir yer edinmiş oldu.</p>
+    
+    <h2>Sims: Sims 3 ve Açık Dünya</h2>
+    <p><strong>Açık Dünya Konsepti:</strong> 2009 yılında piyasaya sürülen Sims 3, oyun dünyasında önemli bir yenilik getirdi: açık dünya konsepti. Bu, oyunculara şehirlerin tamamını gezme ve etkileşimde bulunma fırsatı sundu. Sims 3, karakterlerin etkileşimde bulunabileceği geniş bir oyun dünyası sunarak, oyunculara daha fazla özgürlük ve keşif imkanı verdi. Açık dünya, karakterlerin sosyal etkileşimlerini ve yaşam tarzlarını daha özgür bir şekilde deneyimlemelerine olanak sağladı. Bu yenilik, Sims serisinin popülaritesini artırdı ve oyuncuların oyun dünyasıyla daha derin bir bağ kurmasını sağladı.</p>
+    
+    <h2>Sinema: Sinema ve Teknoloji</h2>
+    <p><strong>Dijital Devrim:</strong> 2010'ların başında, Türk sineması dijital teknolojilere geçiş yaptı. Dijital kameralar, CGI ve diğer teknolojik yenilikler, film yapım sürecini ve görsel kalitesini önemli ölçüde geliştirdi. "Ayla" (2017) gibi filmler, dijital teknolojinin sinema üzerindeki etkilerini ve anlatım gücünü gösterdi. Bu dönüşüm, Türk sinemasının uluslararası standartlara ulaşmasına yardımcı oldu.</p>
+    
+    <h2>Kıbrıs: Kıbrıs’ın Ekonomik Gelişimi</h2>
+    <p><strong>Turizm ve Ekonomik Büyüme:</strong> Son yıllarda, Kıbrıs’ın ekonomisi özellikle turizm sektöründe önemli bir büyüme gösterdi. Kuzey Kıbrıs ve Güney Kıbrıs bölgesinde, turizm yatırımları ve uluslararası işbirlikleri ile ekonomik kalkınma sağlandı. Bu dönemde, Kıbrıs, Akdeniz’in popüler tatil destinasyonlarından biri haline geldi ve ekonomik kalkınma adada önemli bir rol oynadı.</p>
+    
+    <h2>Cadbury'nin Şekerleme Üretimine Başlangıcı: 23 Eylül 1824</h2>
+    <p>23 Eylül 1824, ünlü çikolata markası Cadbury'nin kurulduğu tarihtir. John Cadbury, 1824 yılında İngiltere’de küçük bir şekerleme dükkânı açtı ve kakao ürünleri üretmeye başladı. Cadbury'nin ilk ürünleri, çikolata ve kakao tozlarıydı. Şirket, zamanla çikolata üretiminde yenilikçi yöntemler geliştirerek, dünya çapında tanınan bir marka haline geldi. Cadbury’nin kaliteli çikolataları ve sosyal sorumluluk projeleri, markanın global başarı elde etmesine yardımcı oldu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 24 -->
+<div class="modal fade" id="modal24" tabindex="-1" aria-labelledby="modal24Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal24Label">24 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>24 Eylül: Tarihte Bugün</h2>
+    
+    <h2>Y2K Modası (2000'lerin Başı)</h2>
+    <p><strong>Milenyumun Gelişi:</strong> 2000'lerin başında Y2K modası, milenyumun getirdiği teknoloji etkisiyle parlak ve futuristik bir tarzı benimsedi. Metalik renkler, kısa üstler ve bol pantolonlar dönemin vazgeçilmezleri arasındaydı.</p>
+    <p><strong>Stilin Özellikleri:</strong> Y2K modasında parlak kumaşlar, düşük bel kotlar, küçük omuz çantaları ve metalik tonlar öne çıktı. Özellikle gençler arasında popüler olan bu stil, teknolojinin modaya nasıl yansıdığını gösterdi. Britney Spears ve Christina Aguilera gibi isimler, bu akımın öncülerindendi. Y2K tarzı, modanın daha deneysel ve özgür bir hal almasının başlangıcı oldu.</p>
+    
+    <h2>Vivienne Westwood’un Punk Moda Hareketi: 24 Eylül 1976</h2>
+    <p>24 Eylül 1976, ünlü İngiliz moda tasarımcısı Vivienne Westwood'un punk moda hareketini başlattığı tarihtir. Vivienne Westwood, 1976 yılında Londra’da punk modasının öncüsü olarak tanındı. Westwood'un tasarımları, punk kültürünün asi ve isyankar ruhunu yansıttı. Özellikle yırtık kumaşlar, toplumsal mesajlar içeren tasarımlar ve sıra dışı aksesuarlarla tanınan Westwood, punk modasını global bir fenomene dönüştürdü. Westwood’un katkıları, moda tarihindeki önemli dönüm noktalarından biri olarak kabul edilir.</p>
+    
+    <h2>Sims: Sims 4 ve Gelişmiş Özellikler</h2>
+    <p><strong>Yeni Özellikler ve Güncellemeler:</strong> Sims 4, 2014 yılında piyasaya sürüldü ve oyunun önceki versiyonlarından birçok yenilik getirdi. Bu sürüm, daha gelişmiş grafikler, detaylı karakter özelleştirmeleri ve daha dinamik oyun mekanikleri sundu. Sims 4, özellikle karakterlerin duygusal durumlarını ve sosyal etkileşimlerini daha ayrıntılı bir şekilde simüle ederek, oyunculara daha zengin bir deneyim sundu. Ayrıca, "Create a Sim" ve "Build/Buy" modları gibi yeni özelliklerle, oyunculara daha fazla kişiselleştirme ve tasarım imkanı tanıdı.</p>
+    
+    <h2>Sinema: Türk Sinemasında Komedi</h2>
+    <p><strong>Efsanevi Komedi Filmleri:</strong> Türk sinemasında komedi, özellikle 1970'ler ve 1980'lerde büyük bir popülerlik kazandı. Kemal Sunal ve Şener Şen gibi komedyenler, Türk halkının günlük yaşamını mizahi bir şekilde yansıttıkları filmlerle geniş bir izleyici kitlesine hitap etti. "Hababam Sınıfı" (1975) ve "Kibar Feyzo" (1978) gibi filmler, Türk sinemasının komedi alanındaki önemli yapıtları arasında yer aldı.</p>
+    
+    <h2>Kıbrıs: Kıbrıs’ın Kültürel Mirası</h2>
+    <p><strong>Kültürel Zenginlik ve Miras:</strong> Kıbrıs, tarihi boyunca birçok farklı medeniyete ev sahipliği yapmıştır ve bu durum adanın kültürel mirasını zenginleştirmiştir. Kıbrıs Müzesi, adanın antik dönemlerinden kalma eserleri sergilemektedir. Ayrıca, adanın geleneksel festivalleri, müzikleri ve el sanatları, Kıbrıs’ın kültürel çeşitliliğini yansıtmaktadır.</p>
+    
+    <h2>M&M's’in İlk Üretimi: 24 Eylül 1941</h2>
+    <p>24 Eylül 1941, M&M's markasının renkli şeker kaplı çikolatalarının piyasaya sürüldüğü tarihtir. Forrest Mars ve Bruce Murrie, 1941 yılında M&M's'i piyasaya sürdüler. M&M's, şeker kaplaması sayesinde çikolataların erimemesini sağladı ve askeri tedarik için ideal hale geldi. M&M's, kısa sürede popülerlik kazandı ve çikolata endüstrisinde önemli bir yer edindi. Şirket, zamanla birçok farklı tat ve çeşitle tüketici beğenisine sundu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 25 -->
+<div class="modal fade" id="modal25" tabindex="-1" aria-labelledby="modal25Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal25Label">25 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>25 Eylül</h2>
+
+    <p><strong>Neo-Grunge (2010'lar)</strong></p>
+    <p><strong>Eskiye Dönüşün Modern Yorumu:</strong> 1990'lardaki orijinal Grunge modasının yeniden yorumlanması olarak ortaya çıkan Neo-Grunge, 2010'larda sokak modasında kendine yer buldu. Rahat ve salaş görünüm yeniden modern dokunuşlarla geri döndü.</p>
+    <p><strong>Stilin Özellikleri:</strong> Neo-Grunge modası, deri ceketler, yıpranmış jeanler, postallar ve flanel gömleklerle tanındı. 1990'ların asi ruhu, 2010'ların minimalist ve şık detaylarıyla birleşti. Özellikle gençler arasında popüler olan bu akım, asi ve rahat bir görünüm isteyenler için yeniden doğdu.</p>
+
+    <p><strong>Isabel Marant’ın Bohem Tarzı: 25 Eylül 1994</strong></p>
+    <p>25 Eylül 1994, ünlü Fransız moda tasarımcısı Isabel Marant’ın ilk koleksiyonunu tanıttığı tarihtir. Isabel Marant, 1994 yılında Paris’te ilk koleksiyonunu sundu ve bohem, rahat bir stil ile dikkat çekti. Marant’ın tasarımları, günlük yaşam için şık ve kullanışlı kıyafetler sunarak geniş bir müşteri kitlesi oluşturdu. Özellikle “çizgili bluzlar” ve “yırtık kotlar” ile tanınan Marant, global moda dünyasında etkili bir isim haline geldi.</p>
+
+    <p><strong>Sims: Sims 4 Genişleme Paketleri</strong></p>
+    <p><strong>Yenilikler ve İçerik Eklemeleri:</strong> Sims 4, piyasaya sürüldükten sonra birçok genişleme paketi ve içerik güncellemesi aldı. Bu paketler, yeni mekanikler, işlevler ve temalar ekleyerek oyunun kapsamını genişletti. Örneğin, "Seasons" genişleme paketi, karakterlerin mevsimsel değişikliklere uyum sağlamasını ve çeşitli hava koşullarını deneyimlemesini sağladı. "City Living" paketi, şehir yaşamını ve toplu konutları oyuna dahil etti. Bu genişleme paketleri, Sims 4’ün sürekli olarak gelişmesini ve oyunculara yeni içerikler sunmasını sağladı.</p>
+
+    <p><strong>Sinema: Türk Sinemasında Drama ve Aşk</strong></p>
+    <p><strong>Derin ve Duygusal Yapıtlar:</strong> Türk sinemasında drama ve aşk temaları, sıkça işlenen konular arasında yer aldı. "Sarıyer" (1983) ve "Düş Gezginleri" (2007) gibi filmler, derin karakter analizleri ve güçlü duygusal temalarla tanındı. Türk sinemasının bu alanındaki eserler, izleyicilere güçlü duygusal deneyimler sundu ve sinemanın sanat formu olarak kabul edilmesini pekiştirdi.</p>
+
+    <p><strong>Kıbrıs: Kıbrıs’taki Doğal Güzellikler</strong></p>
+    <p><strong>Adanın Doğal Zenginlikleri:</strong> Kıbrıs, etkileyici doğal güzellikleri ile de bilinir. Troodos Dağları, Aphrodite’nin Kayası ve Karpaz Yarımadası gibi bölgeler, adanın doğal güzelliklerini ve ekosistemini yansıtır. Bu bölgeler, hem turistler hem de doğa severler için cazip mekanlar sunar.</p>
+
+    <p><strong>Kuruluş Hikayeleri:</strong></p>
+    <p><strong>Ritz Krakerlerinin Doğuşu: 25 Eylül 1934</strong></p>
+    <p>25 Eylül 1934, Ritz krakerlerinin tanıtıldığı tarihtir. Nabisco tarafından üretilen Ritz, zengin tereyağlı tadı ve yuvarlak şekli ile dikkat çekti. Ritz'in eşsiz tadı ve ambalajı, onu piyasada benzeri ürünlerden ayırdı ve popüler hale getirdi. Ritz, zamanla geniş bir ürün yelpazesi ile tüketici beğenisini kazandı ve dünya çapında bilinen bir kraker markası oldu.</p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 26 -->
+<div class="modal fade" id="modal26" tabindex="-1" aria-labelledby="modal26Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal26Label">26 Eylül</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>26 Eylül</h2>
+
+    <p><strong>Athleisure (2010'lar ve Sonrası)</strong></p>
+    <p><strong>Spor ve Şıklığın Buluşması:</strong> 2010'ların başından itibaren popüler hale gelen Athleisure, spor kıyafetlerin günlük hayatta da kullanılabileceğini kanıtladı. Hem rahatlık hem de stil sunan bu akım, modern yaşamın hızına ayak uydurdu.</p>
+    <p><strong>Stilin Özellikleri:</strong> Athleisure, yoga pantolonları, spor sütyenleri, rahat tişörtler ve sneaker'lar gibi spor giyim ürünlerinin günlük stilin bir parçası haline gelmesiyle tanımlanır. Nike, Adidas gibi spor markalarının yanı sıra, lüks markalar da bu trendi benimsedi. Hem şık hem de konforlu bir görünüm sunan Athleisure, modern şehir yaşamının vazgeçilmez bir modası haline geldi.</p>
+
+    <p><strong>Jil Sander’ın Minimalist Yaklaşımı: 26 Eylül 1981</strong></p>
+    <p>26 Eylül 1981, ünlü Alman moda tasarımcısı Jil Sander'ın ilk büyük moda şovunu gerçekleştirdiği tarihtir. Jil Sander, 1981 yılında minimalist ve sade tasarımlarıyla dikkat çekti. Sander’ın tasarımları, yüksek kalite kumaşlar ve keskin hatlarla tanındı. Minimalist stil anlayışı, Jil Sander’ı moda dünyasında önemli bir figür haline getirdi. Sander’ın koleksiyonları, zarif ve sofistike bir estetik anlayışını yansıttı ve global moda sahnesinde geniş bir etki yarattı.</p>
+
+    <p><strong>Sims: Sims’in Kültürel Etkisi</strong></p>
+    <p><strong>Bir Fenomenin Evrimi:</strong> Sims serisi, sadece bir video oyunu olmanın ötesine geçti ve kültürel bir fenomen haline geldi. Oyun, birçok farklı yaş grubundan ve kültürel arka plandan insanlara hitap etti. Sims, oyunculara kendi yaşamlarını yaratma ve yönetme fırsatı sunarak, oyun dünyasında yeni bir standart belirledi. Ayrıca, Sims’in toplumsal ve kültürel etkileri, oyunların yaşam simülasyonu ve karakter yönetimi konusundaki anlayışını yeniden şekillendirdi. Oyun, yıllar boyunca birçok ödül kazandı ve geniş bir oyuncu kitlesi tarafından sevilerek oynandı.</p>
+
+    <p><strong>Sinema: Türk Sinemasının Geleceği</strong></p>
+    <p><strong>Yeni Nesil Yönetmenler ve Trendler:</strong> Son yıllarda, genç yönetmenlerin ve yeni nesil sinemacıların Türk sinemasına katkıları dikkat çekiyor. Emir Kusturica gibi uluslararası alanda tanınmış yönetmenlerin yanı sıra, Güvenç Dağüstün, Ömer Faruk Sorak gibi genç yetenekler, Türk sinemasının geleceğini şekillendiriyor. Ayrıca, dijital platformlar ve internet yayıncılığı, Türk sinemasının ulaşılabilirliğini ve çeşitliliğini artırıyor. Bu değişim, Türk sinemasının uluslararası alanda daha geniş bir etki yaratmasına olanak sağlıyor.</p>
+
+    <p><strong>Kıbrıs: Kıbrıs’ın Geleceği ve Uluslararası İlişkiler</strong></p>
+    <p><strong>Kıbrıs’ın Gelecek Perspektifleri:</strong> Kıbrıs’ın geleceği, adadaki bölünmüşlüğü aşma ve kalıcı barış sağlama çabaları ile şekillenmektedir. Uluslararası ilişkiler ve diplomatik müzakereler, Kıbrıs’ın birleşmesi ve sürdürülebilir kalkınması için önemli rol oynamaktadır. Adanın uluslararası alandaki ilişkileri, bölgesel işbirlikleri ve çözüm süreci, Kıbrıs’ın gelecekteki yönünü belirleyecektir.</p>
+
+    <p><strong>Kuruluş Hikayeleri:</strong></p>
+    <p><strong>Jelly Belly’nin Kuruluşu: 26 Eylül 1976</strong></p>
+    <p>26 Eylül 1976, Jelly Belly markasının ilk jelibonlarının piyasaya sürüldüğü tarihtir. David Klein, 1976 yılında Jelly Belly’i kurarak, dünya çapında ünlü hale gelen bu tatlıyı üretmeye başladı. Jelly Belly'nin küçük, renkli ve aromatik jelibonları, özellikle farklı tatlarıyla dikkat çekti ve geniş bir müşteri kitlesi oluşturdu. Şirket, zamanla birçok farklı tat ve çeşitle, jelibon pazarında kendine sağlam bir yer edindi.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Diğer günlerin modalları (17-26 Eylül için aynı yapıyla ekleyebilirsiniz)... -->
+
+<!-- Bootstrap JS -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+></script>
+</body>
+</html>
